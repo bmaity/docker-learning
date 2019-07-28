@@ -1,4 +1,4 @@
-'''# docker-learning
+# docker-learning
 docker learning docs https://docs.docker.com/docker-for-mac/
 
 This tells you about the command to pull docker images from docker hub and how to run those images on docker-containers 
@@ -81,4 +81,3 @@ phpmyadmin:
   MYSQL_USERNAME: root
   MYSQL_ROOT_PASSWORD: <put your own password>
 # 
-'''
