@@ -1,0 +1,62 @@
+## List Docker CLI commands
+docker
+docker container --help
+
+## Display Docker version and info
+docker --version
+docker version
+docker info
+docker-compose --version
+docker-machine --version
+
+## Pull docker image from docker hub (for public repository in docker hub)
+docker pull ubuntu
+docker pull amazonlinux
+docker pull centos
+docker pull biswajitmaity/votingapp_result-app
+
+## Execute Docker image
+docker run hello-world
+docker run -it ubuntu
+docker run -it amazonlinux
+docker run -it centos
+docker run -it biswajitmaity/votingapp_result-app
+
+
+## List Docker images
+docker image ls
+
+## List Docker containers (running, all, all in quiet mode)
+docker container ls
+docker container ls --all
+docker container ls -aq
+
+
+##Docker compose 
+
+$pip install docker-compose
+$vi docker-compose.yml 
+$cat docker-compose.yml 
+wordpress:
+ image: wordpress
+ links:
+  - wordpress_db:mysql
+ ports:
+  - 8080:80
+wordpress_db:
+ image : mariadb
+ environment:
+  MYSQL_ROOT_PASSWORD: <your_own_password>
+phpmyadmin:
+ image: corbinu/docker-phpmyadmin
+ links:
+  - wordpress_db:mysql
+ ports:
+  - 8181:80
+ environment:
+  MYSQL_USERNAME: root
+  MYSQL_ROOT_PASSWORD: <your_own_password>
+ $
+ 
+ ## Run docker-compose 
+ $docker-compose up -d
